@@ -1,18 +1,20 @@
+let contEl = document.getElementById("count-el");
+let saveEl = document.getElementById("save-el");
 let count = 0;
-let countEl = document.getElementById("count-el");
-
-let message = "Last entred: ";
-let logEl = document.getElementById("log-el");
+let saveMessage = "Previos entries: ";
 
 function increment(){
-    count += 1;
-    countEl.innerText = count;
+    count += 1
+    contEl.innerText = count
 }
 
 function save(){
-    message += count + " - ";
-    count = 0;
-
-    countEl.innerText = count;
-    logEl.innerText = message;
+    if(saveMessage == "Previos entries: "){
+        saveMessage += count + " "
+    } else{
+        saveMessage += "- "+count+ " "
+    }
+    saveEl.innerText = saveMessage
+    count = 0
+    contEl.innerText = count
 }
