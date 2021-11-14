@@ -14,7 +14,7 @@ function save(){
     } else{
         saveMessage += "- "+count+ " "
     }
-    saveEl.innerText = saveMessage
+    saveEl.textContent = saveMessage
     count = 0
-    contEl.innerText = count
+    contEl.textContent = count
 }
