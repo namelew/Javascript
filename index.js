@@ -1,20 +1,14 @@
-let contEl = document.getElementById("count-el");
-let saveEl = document.getElementById("save-el");
-let count = 0;
-let saveMessage = "Previos entries: ";
+let firstCard = Math.floor(Math.random() * 10) + 2
+let secondCard = Math.floor(Math.random() * 10) + 2
 
-function increment(){
-    count += 1
-    contEl.innerText = count
-}
+let sum = firstCard + secondCard
 
-function save(){
-    if(saveMessage == "Previos entries: "){
-        saveMessage += count + " "
-    } else{
-        saveMessage += "- "+count+ " "
-    }
-    saveEl.textContent = saveMessage
-    count = 0
-    contEl.textContent = count
+console.log(sum)
+
+if(sum < 21){
+    console.log("Do you want to draw a new card?")
+}else if(sum === 21){
+    console.log("You've got blackjack!")
+} else if(sum > 21){
+    console.log("You're out of the game!")
 }
