@@ -8,6 +8,14 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardEl = document.querySelector("#cards-el")
 
+let player = {
+    name: "Diogo",
+    chips: 145
+}
+
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent = player.name + ": $ " + player.chips
+ 
 function displaySum(){
     if(sumEl.textContent != "Sum: "){
         sumEl.textContent = "Sum: " + sum
