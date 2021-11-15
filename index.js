@@ -23,9 +23,7 @@ function startGame(){
 }
 
 function displayCards(pager){
-    for(let i = pager - 1; i < cards.length; i++){
-        cardEl.textContent += cards[i] + " "
-    }
+    cardEl.textContent += cards[pager - 1] + " "
 }
 
 function renderGame(){
