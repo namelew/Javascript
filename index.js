@@ -1,5 +1,5 @@
-let firstCard = Math.floor(Math.random() * 10) + 2
-let secondCard = Math.floor(Math.random() * 10) + 2
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 
 let sum = firstCard + secondCard
@@ -16,6 +16,10 @@ function displaySum(){
     } else{
         sumEl.textContent += sum
     }
+}
+
+function getRandomCard(){
+    return Math.floor(Math.random() * 10) + 2
 }
 
 function startGame(){
@@ -48,7 +52,7 @@ function renderGame(){
 function newCard(){
     console.log("Drawing a new card from te deck")
     
-    let card = Math.floor(Math.random() * 10) + 2
+    let card = getRandomCard()
 
     sum += card
 
